@@ -26,4 +26,8 @@ export class UserService {
   async delete(id: string): Promise<User> {
     return this.userModel.deleteOne({ _id: id }).exec();
   }
+
+  async addFriend(id: string, user: User): Promise<User> {
+    return this.userModel.updateOne({ _id: id });
+  }
 }

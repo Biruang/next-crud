@@ -31,4 +31,10 @@ export class UserController {
   async delete(@Param() params): Promise<User> {
     return await this.userService.delete(params.id);
   }
+
+  @Post('/friends')
+  async addFriend(): Promise<void> {}
+
+  @Delete('/friends')
+  async deleteFriend(): Promise<void> {}
 }
